@@ -9,7 +9,7 @@ class DataComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [1, 2, 3, 4, 5, 6, 7],
+      users: [],
       itemsperpage: 1,
       nocolumns: 2,
       items: 5
@@ -19,6 +19,7 @@ class DataComponent extends React.Component {
   }
 
   componentDidMount() {
+    console.log("initial state", this.state);
     this.getAllUsers();
     // this.interval = setInterval(this.getAllUsers, 1000);
   }
